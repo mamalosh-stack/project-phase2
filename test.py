@@ -4,14 +4,6 @@ from pathlib import Path
 from datetime import datetime, date
 import uuid
 
-
-from ui import Penny
-from ui import Rewards
-from ui import Stock
-from ui import appointments
-from ui import employee
-from ui import navigation
-
 # Naming the website
 st.set_page_config(page_title="Polished to Perfection", layout="wide", initial_sidebar_state="expanded")
 

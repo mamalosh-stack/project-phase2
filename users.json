@@ -18,5 +18,35 @@
         "registered_at": "2026-04-05 17:00:00",
         "reward_points": 0,
         "reward_history": []
+    },
+    {
+        "id": "c1d8bd42-fe8a-4cef-9e59-fb22f967bf91",
+        "email": "employee@udel.edu",
+        "full_name": "hi",
+        "password": "123456",
+        "role": "Customer",
+        "registered_at": "2026-04-05 22:18:16.053394",
+        "reward_points": 0,
+        "reward_history": []
+    },
+    {
+        "id": "dccff8a4-b28a-461d-b6f5-ea6a65481aaf",
+        "email": "aiden@gmail.com",
+        "full_name": "Aiden",
+        "password": "Aiden1",
+        "role": "Employee",
+        "registered_at": "2026-04-08 20:22:25.065916",
+        "reward_points": 0,
+        "reward_history": []
+    },
+    {
+        "id": "a21cddaa-d0d4-4fcf-b99b-4540f9226a04",
+        "email": "m@gmail.com",
+        "full_name": "M",
+        "password": "1234567",
+        "role": "Customer",
+        "registered_at": "2026-04-08 20:23:39.944099",
+        "reward_points": 0,
+        "reward_history": []
     }
 ]
