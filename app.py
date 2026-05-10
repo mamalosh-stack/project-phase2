@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from datetime import datetime, date
 import uuid
-
+from data.json_store.json_store import *
 
 from ui import Penny
 from ui import Rewards
@@ -11,7 +11,7 @@ from ui import Stock
 from ui import appointments
 from ui import employee
 from ui import navigation
-from data.json_store import *
+
 
 # Naming the website
 st.set_page_config(page_title="Polished to Perfection", layout="wide", initial_sidebar_state="expanded")
