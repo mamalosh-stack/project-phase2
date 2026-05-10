@@ -11,6 +11,7 @@ from ui import Stock
 from ui import appointments
 from ui import employee
 from ui import navigation
+from data.json_store import *
 
 # Naming the website
 st.set_page_config(page_title="Polished to Perfection", layout="wide", initial_sidebar_state="expanded")
