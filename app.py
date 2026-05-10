@@ -441,7 +441,7 @@ else:
             with col2:
                 st.title("Polished to Perfection")
                 st.subheader("Customer Dashboard")
-            st.divider()
+                st.divider()
 
             col1, col2, col3, col4 = st.columns(4)
             with col1:
@@ -450,8 +450,7 @@ else:
                     st.markdown(f"## {upcoming_count}")
                     st.caption("Scheduled")
             with col2:
-                with st.container(border            # KPI cards
-                =True):
+                with st.container(border=True):
                     st.info("###### Old")
                     st.markdown(f"## {old_count}")
                     st.caption("Past")
@@ -698,8 +697,9 @@ else:
         if st.session_state["page"] == "dashboard":
             col1, col2, col3 = st.columns([2, 3, 2])
             with col2:
-                st.header("Polished to Perfection - Employee Dashboard")
-            st.divider()
+                st.title("Polished to Perfection")
+                st.subheader("Employee Dashboard")
+                st.divider()
 
             col1, col2, col3, col4 = st.columns(4)
             with col1:
