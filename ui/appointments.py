@@ -2,19 +2,8 @@ import streamlit as st
 from datetime import datetime
 from services.appointment_service import get_appointments, add_appointment
 
-def show_book_appointment():
-        st.header("Book Appointment")
-        st.divider()
 
-        service = st.selectbox(
-                "Choose service",
-                ["Select an option...", "Haircut", "Nails", "Facial", "Massage"]
-        )
 
-        employee = st.selectbox(
-                "Choose employee", ["Select an option...", "Penny", "Alex", "Taylor"])
-        
-        
 
 def show_appointments(user_appts, appointments, save_appointments, save_inventory, is_past_appointment, update_inventory_for_service):
     if st.session_state["page"] == "my_appointments":

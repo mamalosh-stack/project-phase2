@@ -8,16 +8,41 @@ from data.json_store.json_store import *
 from ui import Penny
 from ui import Rewards
 from ui import Stock
-from ui import appointments
+from ui import appointments as appointments_ui
 from ui import employee
 from ui import navigation
 
 
 # Naming the website
-st.set_page_config(page_title="Polished to Perfection", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(
+    page_title="Appointment Manager",
+    layout="centered",
+    initial_sidebar_state="collapsed"
+)
 
+st.markdown("""
+    <style>
+    .stButton button {
+        border-radius: 10px;
+        height: 3em;
+        font-weight: 600;
+    }
+
+    .stDataFrame {
+        border-radius: 10px;
+    }
+
+    div[data-testid="stMetric"] {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 12px;
+    }
+    </style>
+""", unsafe_allow_html=True)
 # Session State
 # -----------------------------
+if "page" not in st.session_state:
+    st.session_state["page"] = "Appointment Dashboard"
 if "logged_in" not in st.session_state:
     st.session_state["logged_in"] = False
 if "user" not in st.session_state:
@@ -264,6 +289,8 @@ if st.session_state["logged_in"]:
 
     with st.sidebar:
         st.markdown("## Polished to Perfection")
+        st.caption("Salon Management System")
+        st.info("Book appointments, manage rewards, and track salon inventory.")
         st.write(f"Logged in as: {st.session_state['user']['full_name']}")
         st.write(f"Role: {st.session_state['role']}")
         st.divider()
@@ -410,29 +437,34 @@ else:
 
     # customer dashboard page    #KPI cards
         if st.session_state["page"] == "dashboard":
-            col1, col2, col3 = st.columns([2, 3, 2])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
-                st.header("Polished to Perfection - Customer Dashboard")
+                st.title("Polished to Perfection")
+                st.subheader("Customer Dashboard")
             st.divider()
 
             col1, col2, col3, col4 = st.columns(4)
             with col1:
                 with st.container(border=True):
-                    st.markdown("#### Upcoming")
+                    st.success("###### Upcoming")
                     st.markdown(f"## {upcoming_count}")
+                    st.caption("Scheduled")
             with col2:
                 with st.container(border            # KPI cards
                 =True):
-                    st.markdown("#### Old")
+                    st.info("###### Old")
                     st.markdown(f"## {old_count}")
+                    st.caption("Past")
             with col3:
                 with st.container(border=True):
-                    st.markdown("#### Canceled")
+                    st.error("###### Canceled")
                     st.markdown(f"## {canceled_count}")
+                    st.caption("Canceled visits")
             with col4:
                 with st.container(border=True):
-                    st.markdown("#### Reward Points")
+                    st.warning("###### Rewards")
                     st.markdown(f"## {reward_points}")
+                    st.caption("Reward points")
 
 
             st.divider()
@@ -526,7 +558,7 @@ else:
 
 #Marissa code added (Appointment Page)
         elif st.session_state["page"] == "my_appointments":
-            appointments.show_appointments(user_appts, appointments, save_appointments, save_inventory, is_past_appointment, update_inventory_for_service)
+            appointments_ui.show_appointments(user_appts, appointments, save_appointments, save_inventory, is_past_appointment, update_inventory_for_service)
 
 # Reward code from JACKIE 
 

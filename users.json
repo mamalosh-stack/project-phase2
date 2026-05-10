@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "id": "9751b336-9316-45c9-8e3c-07344f24d525",
+        "email": "mamalosh@udel.edu",
+        "full_name": "Marissa",
+        "password": "123456",
+        "role": "Customer",
+        "registered_at": "2026-05-10 11:45:19.884620",
+        "reward_points": 0,
+        "reward_history": []
+    }
+]
