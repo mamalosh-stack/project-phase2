@@ -299,16 +299,16 @@ if st.session_state["logged_in"]:
             if st.button("Customer Dashboard", key="customer_dashboard_btn", type="primary", use_container_width=True):
                 st.session_state["page"] = "dashboard"
                 st.rerun()
-            if st.button("Book Appointment", key="book_appointment_btn", use_container_width=True):
+            if st.button("Book Appointment", key="book_appointment_btn", type= "primary", use_container_width=True):
                 st.session_state["page"] = "book_appointment"
                 st.rerun()
-            if st.button("My Appointments", key="my_appointments_btn", use_container_width=True):
+            if st.button("My Appointments", key="my_appointments_btn", type = "primary", use_container_width=True):
                 st.session_state["page"] = "my_appointments"
                 st.rerun()
-            if st.button("Rewards", key="rewards_btn", use_container_width=True):
+            if st.button("Rewards", key="rewards_btn", type = "primary", use_container_width=True):
                 st.session_state["page"] = "rewards"
                 st.rerun()
-            if st.button("Penny the Polish Pro", key="penny_chat_btn", use_container_width=True):
+            if st.button("Penny the Polish Pro", key="penny_chat_btn", type = "primary", use_container_width=True):
                 st.session_state["page"] = "penny_chat"
                 st.rerun()
 
