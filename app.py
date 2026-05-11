@@ -355,7 +355,7 @@ if not st.session_state["logged_in"]:
         reg_password = st.text_input("Password", type="password", key="reg_password")
         reg_role = st.selectbox("Role", ["Customer", "Employee"], key="reg_role")
 
-        if st.button("Create Account", key="create_account_btn"):
+        if st.button("Create Account", key="create_account_btn", type = "primary", use_container_width=True):
             if not reg_email or not reg_name or not reg_password:
                 st.error("Please fill in all fields.")
             elif "@" not in reg_email or "." not in reg_email:
@@ -392,7 +392,7 @@ if not st.session_state["logged_in"]:
         login_email = st.text_input("Email", key="login_email").strip().lower()
         login_password = st.text_input("Password", type="password", key="login_password")
 
-        if st.button("Log In", key="login_btn"):
+        if st.button("Log In", key="login_btn", type = "primary", use_container_width=True):
             user_found = None
             for user in users:
                 if user["email"].lower() == login_email and user["password"] == login_password:
