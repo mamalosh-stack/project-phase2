@@ -799,35 +799,43 @@ else:
             if appt.get("status") == "Completed":
                 completed_appointments += 1
 
-#last code from Jackie/Marissa worked on it together
         low_stock_count = get_low_stock_count()
 
         if st.session_state["page"] == "dashboard":
-            col1, col2, col3 = st.columns([2, 3, 2])
+            col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
                 st.title("Polished to Perfection")
                 st.subheader("Employee Dashboard")
                 st.divider()
 
             col1, col2, col3, col4 = st.columns(4)
+
             with col1:
-                with st.container(border=True):
-                    st.markdown("#### Today's Appointments")
+                with st.container(border=True, height=180):
+                    st.success("##### Upcoming")
                     st.markdown(f"## {todays_appointments}")
+                    st.caption("Scheduled appointments")
+
             with col2:
-                with st.container(border=True):
-                    st.markdown("#### Scheduled")
+                with st.container(border=True, height=180):
+                    st.info("##### Scheduled")
                     st.markdown(f"## {scheduled_appointments}")
+                    st.caption("Scheduled")
+
             with col3:
-                with st.container(border=True):
-                    st.markdown("#### Completed")
+                with st.container(border=True, height=180):
+                    st.error("###### Completed")
                     st.markdown(f"## {completed_appointments}")
+                    st.caption("Completed")
+
             with col4:
-                with st.container(border=True):
-                    st.markdown("#### Low Stock")
+                with st.container(border=True, height=180):
+                    st.warning("##### Low Stock")
                     st.markdown(f"## {low_stock_count}")
+                    st.caption("Low stock items")
 
             st.divider()
+
             col1, col2 = st.columns([4, 2])
             with col1:
                 with st.container(border=True):

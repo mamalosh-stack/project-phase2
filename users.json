@@ -8,5 +8,15 @@
         "registered_at": "2026-05-10 11:45:19.884620",
         "reward_points": 0,
         "reward_history": []
+    },
+    {
+        "id": "3497a92f-b74f-42f2-ab4d-949731999d00",
+        "email": "employee@gmail.com",
+        "full_name": "Employee",
+        "password": "employee",
+        "role": "Employee",
+        "registered_at": "2026-05-10 20:59:08.677403",
+        "reward_points": 0,
+        "reward_history": []
     }
 ]
